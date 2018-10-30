@@ -179,6 +179,9 @@ You can find more information on how we use Protobuf on [our wiki!](https://gith
 
 [Developer](#translations-for-developers) | [Maintainer](#translations-for-maintainers) | [Translator](#translations-for-translators) 
 
+<!-- TODO
+https://github.com/Cockatrice/Cockatrice/pull/3423#issuecomment-434173917 -->
+
 **Basic workflow for translations:**
  1. [Developer adds a `tr("foo")` string in the code](#step-1-adding-translatable-strings-to-the-code-trfoo);
  2. [Every few days, a maintainer updates the `*_en.ts files` with the new strings](#step-2-updating-_ents-files-with-new-strings);
