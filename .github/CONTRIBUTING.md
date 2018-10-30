@@ -180,7 +180,7 @@ You can find more information on how we use Protobuf on [our wiki!](https://gith
 [Developer](#translations-for-developers) | [Maintainer](#translations-for-maintainers) | [Translator](#translations-for-translators) 
 
 **Basic workflow for translations:**
- 1. [Developer adds a `tr("foo")` string in the code](##step-1-adding-translatable-strings-to-the-code-trfoo);
+ 1. [Developer adds a `tr("foo")` string in the code](#step-1-adding-translatable-strings-to-the-code-trfoo);
  2. [Every few days, a maintainer updates the `*_en.ts files` with the new strings](#step-2-updating-_ents-files-with-new-strings);
  3. [Transifex picks up the new files from github every 24 hours](#step-3-automatic-pushing-to-transifex);
  4. [Translators translate the new untraslated strings on Transifex](#step-4-editing-translations-at-transifex);
