@@ -9,6 +9,7 @@ First off, thanks for taking the time to contribute to our project! 🎉 ❤️ 
 
 The following is a set of guidelines for contributing to Cockatrice. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
+<br>
 
 # Recommended Setups #
 
@@ -18,6 +19,7 @@ Developers who like Windows development tend to find [Visual Studio](https://www
 
 If you have any questions on IDEs, feel free to chat with us on [Gitter](https://gitter.im/Cockatrice/Cockatrice) and we would love to help answer your questions!  
 
+<br>
 
 # Code Style Guide #
 
@@ -174,6 +176,7 @@ Any change to the `proto` file should be taken with caution and tested intensive
 
 You can find more information on how we use Protobuf on [our wiki!](https://github.com/Cockatrice/Cockatrice/wiki/Client-server-protocol)
 
+<br>
 
 # Translations #
 
@@ -189,6 +192,8 @@ https://github.com/Cockatrice/Cockatrice/pull/3423#issuecomment-434173917 -->
  4. [Translators translate the new untraslated strings on Transifex](#step-4-editing-translations-at-transifex)
  5. [Before a release, a maintainer fetches the updated translations from Transifex](#step-5-fetching-new-translations-from-transifex)
 
+<br>
+
 ## Translations (for developers) ##
 
 ### Step 1: Adding translatable strings to the code (`tr("foo")`)
@@ -203,6 +208,8 @@ translation files. Every few days, or when a lot of new strings have been added,
 someone from the development team will take care of extracing all the new strings,
 adding them to the english translation files and making them available to
 translators on Transifex.
+
+<br>
 
 ## Translations (for maintainers) ##
 
@@ -257,12 +264,19 @@ As an alternative, you can install the Transifex CLI:
 You'll then be able to use a git-like cli command to push and pull translations
 from Transifex to the source code and vice versa.
 
+<br>
+
 ## Translations (for translators) ##
 
 ### Step 4: Editing translations at Transifex
 
 Please have a look at the specific [FAQ for translators](https://github.com/Cockatrice/Cockatrice/wiki/Translation-FAQ).
 
+Also, this official ressources in the Transifex documentation are very helpful:
+- [Getting Started as a Translator](https://docs.transifex.com/getting-started-1/translators)
+- [Translating with the Web Editor](https://docs.transifex.com/translation/translating-with-the-web-editor)
+
+<br>
 
 # Release Management #
 
