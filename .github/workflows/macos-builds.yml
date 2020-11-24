@@ -18,28 +18,19 @@ jobs:
       matrix:
         target:
           - Debug
-          - ElCapitan
           - Mojave
           - Catalina
           - BigSur
         include:
           - target: Debug # tests only
             os: macos-latest
-            xcode: 11.7
+            xcode: 12
             type: Debug
             do_tests: 0 # tests do not work yet on mac
             make_package: false
 
-          - target: ElCapitan # xcode 8.2.1 should be compatible with macos 10.11.5
-            os: macos-10.13 # runs on HighSierra
-            allow-failure: yes # we don't know if it'll be added
-            xcode: 8.2.1
-            type: Release
-            do_tests: 0
-            make_package: true
-
-          - target: Mojave # xcode 10.3 should be compatible with macos 10.14.3
-            os: macos-10.15 # runs on Catalina
+          - target: Mojave # Xcode 10.3 uses macOS 10.14 SDK
+            os: macos-10.15
             xcode: 10.3
             type: Release
             do_tests: 0
@@ -47,17 +38,17 @@ jobs:
 
           - target: Catalina
             os: macos-10.15
-            xcode: 11.7
+            xcode: 12.1
             type: Release
             do_tests: 0
-            make_package: true
+            make_package: false # package only needed for the base version as they are upwards compatible
 
           - target: BigSur
             os: macos-11.0
             xcode: 12.2
             type: Release
             do_tests: 0
-            make_package: true
+            make_package: false # package only needed for the base version as they are upwards compatible
 
     runs-on: ${{matrix.os}}
 
@@ -185,3 +176,6 @@ jobs:
           asset_path: build/${{steps.build_package.outputs.file}}
           asset_name: ${{steps.build_package.outputs.file}}
           asset_content_type: binary_package # required but arbitrary
+
+# Information about the used images and their available xcode versions: https://github.com/actions/virtual-environments/tree/main/images/macos
+# Documentation: https://docs.github.com/en/free-pro-team@latest/actions
